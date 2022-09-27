@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: rgba(204, 204, 204, 0.661);
+        }
+
+        #exampleCheck2:checked+.box {
+            background-color: pink;
+        }
+
+        #exampleCheck2:checked+.box::after {
+            content: "V";
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                        else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <div class="form-group form-check">
+
+                    <label class="form-check-label" for="exampleCheck2">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck2" hidden>
+                        <div class="box"></div>
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script>
+        $(':input').css('background', 'red')
+        $(':text').css('background', 'green')
+        $(':password').css('background', 'yellow')
+        $(':checkbox').css('background', 'yellow')
+        // $(':checked + label').css('background', 'blue')
+    </script>
+</body>
+
+</html>

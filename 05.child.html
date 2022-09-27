@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>child</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+        <div class="box">box5</div>
+        <div class="box">box6</div>
+        <div class="box">box7</div>
+        <div class="box">box8</div>
+        <div class="box">box9</div>
+        <div class="box">box10</div>
+        <div class="box">box11</div>
+        <div class="box">box12</div>
+    </div>
+    <div class="wrap">
+        <span>span1</span>
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+        <div class="box">box5</div>
+        <div class="box">box6</div>
+        <div class="box">box7</div>
+        <div class="box">box8</div>
+        <div class="box">box9</div>
+        <div class="box">box10</div>
+        <div class="box">box11</div>
+        <div class="box">box12</div>
+    </div>
+
+    <div class="wrap">
+        <div class="box">box only</div>
+        <span>span1</span>
+        <span>span1</span>
+        <span>span1</span>
+        <span>span1</span>
+        <span>span1</span>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script>
+        $('span:first-child').css('background', 'green')
+        // $('.box:only-of-type').css('background', 'green')
+    </script>
+</body>
+
+</html>
