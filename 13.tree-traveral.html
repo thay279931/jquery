@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <h1 id="result"></h1>
     <ul class="level-1">
         <li class="item-1">item-1</li>
         <li class="item-2">item-2
@@ -30,10 +31,23 @@
     <script src="https://code.jquery.com/jquery-3.6.1.js"
         integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <script>
-        $('.level-1').children().css('outline', 'green 1px solid')
+        // $('.level-1').children().css('outline', 'green 1px solid')
         // $('.level-1').find('li').css('outline', 'green 1px solid')
         // $('.level-1').find('.item-3').css('outline', 'green 1px solid')
-    
+
+        const lis = document.querySelectorAll('li');
+
+        // lis.forEach(function (element) {
+        //     element.addEventListener('click', function (e) {
+        //         e.stopPropagation();
+        //         console.log('lis');
+        //     })
+        // })
+
+        $('li').click(function (e) {
+            e.stopPropagation();
+            console.log('lis', $(e.currentTarget).text());
+        })
     </script>
 </body>
 
