@@ -14,8 +14,28 @@
 </head>
 
 <body>
-    <h1 id="sample">Hello <span>World</span></h1>
-    <h1 id="result"></h1>
+    <!-- <h1 id="sample">Hello <span>World</span></h1>
+    <h1 id="result"></h1> -->
+
+
+    <ul class="level-1">
+        <li class="item-1">item-1</li>
+        <li class="item-2">item-2
+            <ul class="level-2">
+                <li class="item-01">item-01</li>
+                <li class="item-02">
+                    <span>item-02</span>
+                    <ul class="level-3">
+                        <li class="item-001">item-001</li>
+                        <li class="item-002">item-002</li>
+                        <li class="item-003">item-003</li>
+                    </ul>
+                </li>
+                <li class="item-03">item-03</li>
+            </ul>
+        </li>
+        <li class="item-3">item-3</li>
+    </ul>
 
     <script src="https://code.jquery.com/jquery-3.6.1.js"
         integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
@@ -25,10 +45,22 @@
         // const sampleText = $('#sample').text();
         // $('#result').text(sampleText)
 
-        console.log('html:', $('#sample').html());
+        // console.log('html:', $('#sample').html());
 
-        const sampleHtml = $('#sample').html();
-        $('#result').html(sampleHtml)
+        // const sampleHtml = $('#sample').html();
+        // $('#result').html(sampleHtml)
+
+
+        // const sampleHtml = $('#sample').html();
+        // $('#result').text(sampleHtml)
+
+    
+
+        $('li').each((index, item) => {
+            // console.log('index', index);
+            // console.log('item', item);
+            console.log('item text:', $(item).text());
+        })
     </script>
 </body>
 
