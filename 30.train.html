@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {
+            width: 800px;
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .train {
+            display: flex;
+            width: 500%;
+            padding-left: 0;
+            list-style: none;
+            transform: translateX(0);
+            transition: .5s;
+        }
+
+        .train li img {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .slider-dots {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding-left: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        .slider-dots li {
+            width: 40px;
+            height: 10px;
+            border: 1px solid #fff;
+            margin: 0 4px;
+        }
+
+        .slider-dots li:nth-child(1) {
+            background-color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <ul class="train">
+            <li><img src="images/background1.jpg" alt=""></li>
+            <li><img src="images/background2.jpg" alt=""></li>
+            <li><img src="images/background3.jpg" alt=""></li>
+            <li><img src="images/background4.jpg" alt=""></li>
+            <li><img src="images/background5.jpg" alt=""></li>
+        </ul>
+
+        <ul class="slider-dots">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <script src="./js/jquery-3.6.1.min.js"></script>
+    <script>
+        $('.slider-dots li').click(function () {
+            console.log($(this).index());
+            let i = $(this).index() * -800;
+            let x = $(this).index() + 1;
+            console.log(i);
+            $('.train').css('transform', `translateX(${i}px)`);
+            $(this).css('background', '#fff').siblings().css("background","transparent");
+            // if (i == 0) {
+            //     $('.train').css('transform', 'translateX(0)');
+            //     $('.slider-dots li:nth-child(1)').css(' background-color', '#fff')
+            // } else if (i == 1) {
+            //     $('.train').css('transform', 'translateX(-800px)');
+            // } else if (i == 2) {
+            //     $('.train').css('transform', 'translateX(-1600px)');
+            // } else if (i == 3) {
+            //     $('.train').css('transform', 'translateX(-2400px)');
+            // } else if (i == 4) {
+            //     $('.train').css('transform', 'translateX(-3000px)');
+            // }
+            // $('.slider-dots li:nth-child(i)').css('background-color', '#fff');
+        })
+    </script>
+
+</body>
+
+</html>
