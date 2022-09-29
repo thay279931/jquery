@@ -27,6 +27,23 @@
             ['中正', '大安', '信義'],
             ['蘆洲', '三重', '新店'],
         ];
+        console.log(districtArray[0]);
+        console.log(districtArray[1]);
+        console.log(districtArray[2]);
+        $('#city').change(function () {
+            console.log('change',$(this).val());
+            const i = $(this).val();
+            const x=districtArray[i];
+            console.log(x);
+            $('#district').empty();
+            for(let a=0;a<x.length;a++){
+                $('#district').append(`<option value="0">${x[a]}</option>`);
+            }
+            // $('#district').append(`<option value="0">${x[1]}</option>`);
+            // $('#district').append(`<option value="0">${x[2]}</option>`);
+
+        })
+
     </script>
 </body>
 
