@@ -42,12 +42,15 @@
     <script>
         $('.box2').click(function (e) {
             // e.stopPropagation();
+            console.log(e.target);
+            // console.log(e.target);
             console.log('box2 clicked');
             console.log('box2 this', this);
         })
 
         $('.wrap').click(function (e) {
             console.log('e', e);
+            console.log(e.target);
             console.log('wrap clicked');
             console.log('wrap this', this);
         })
