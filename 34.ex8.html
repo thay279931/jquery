@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex8</title>
+    <style>
+        body {
+            margin: 0;
+            height: 500vh;
+        }
+
+        .wrap {
+            width: 100%;
+            height: 50px;
+            background-color: #ccc;
+            position: fixed;
+            top: 0;
+        }
+
+        .box {
+            height: 100%;
+            width: 10%;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="box"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script>
+        $(window).scroll(function () {
+            // 分母、分子，計算閱讀百分比 %
+            console.log('body height', $('body').height());
+            const bh = $('body').height();
+            let ws = $(this).scrollTop();
+            const wh = $(window).height();
+            let i = ws / (bh - wh) * 100 + "%";
+            $('.box').css('width', i);
+        })
+    </script>
+</body>
+
+</html>
