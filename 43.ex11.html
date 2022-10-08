@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {
+            display: flex;
+        }
+
+        .wrap1 {
+            display: flex;
+            width: 500px;
+            height: 500px;
+            background-color: gray;
+
+        }
+
+        .box {
+            width: 500px;
+            height: 500px;
+            background-color: aliceblue;
+        }
+
+        .red {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: red;
+            margin-left: 3px;
+        }
+
+        .green {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: green;
+            margin-left: 3px;
+        }
+
+        .yellow {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: yellow;
+            margin-left: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="box"></div>
+        <div class="wrap1">
+            <div class="red"></div>
+            <div class="green"></div>
+            <div class="yellow"></div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script>
+        $('.red').click(function () {
+            $('.box').css('background-color', 'red');
+        });
+        $('.green').click(function () {
+            $('.box').css('background-color', 'green');
+        });
+        $('.yellow').click(function () {
+            $('.box').css('background-color', 'yellow');
+        });
+
+    </script>
+</body>
+
+</html>

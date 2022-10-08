@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex13</title>
+    <style>
+        body {
+            margin: 0;
+            height: 1000vh;
+        }
+
+        .nav {
+            width: 100%;
+            height: 50px;
+            background-color: tomato;
+            position: fixed;
+            top: 0;
+            transition: .3s;
+        }
+
+        .nav.hide {
+            transform: translateY(-110%);
+        }
+
+        button {
+            position: fixed;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav">I'm nav</nav>
+    <!-- <button>Click</button> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script>
+        // $('button').click(function () {
+        //     $('.nav').toggleClass('hide');
+        // })
+            let lastScroll=0;
+
+        $(window).scroll(function () {
+            const nowScroll = $(this).scrollTop();
+            console.log(nowScroll);
+            console.log(lastScroll);
+            if(nowScroll>lastScroll){
+                $('nav').addClass('hide');
+            }else{
+                $('nav').removeClass('hide');
+            }
+
+            lastScroll=nowScroll;
+
+        })
+    </script>
+</body>
+
+</html>

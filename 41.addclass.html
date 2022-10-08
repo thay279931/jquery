@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 100px;
+            width: 100px;
+            background-color: aqua;
+        }
+
+        .box.active {
+            background-color: rgb(197, 111, 12);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <button class="toggle">toggle</button>
+    <button class="add">add</button>
+    <button class="remove">remove</button>
+    <button class="has">has</button>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script>
+        $('.add').click(function () {
+            $('.box').addClass('active');
+        })
+        $('.remove').click(function () {
+            $('.box').removeClass('active');
+        })
+        $('.toggle').click(function () {
+            $('.box').toggleClass('active');
+        })
+        $('.has').click(function () {
+
+            if ($('.box').hasClass('active')) {
+                $('.box').removeClass('active');
+            } else {
+                $('.box').addClass('active');
+            }
+
+        });
+    </script>
+</body>
+
+</html>
